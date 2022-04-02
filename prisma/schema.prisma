@@ -16,7 +16,7 @@ model Rink {
   name         String
   address      String
   RinkTimeSlot RinkTimeSlot[]
-  Bookings     Bookings[]
+  Booking     Booking[]
 }
 
 model User {
@@ -24,7 +24,7 @@ model User {
   name     String
   email    String
   password String
-  Bookings Bookings[]
+  Booking Booking[]
 }
 
 model RinkTimeSlot {
@@ -36,7 +36,7 @@ model RinkTimeSlot {
   isBooked  Boolean
 }
 
-model Bookings {
+model Booking {
   id        Int      @id @default(autoincrement())
   user      User     @relation(fields: [userId], references: [id])
   userId    Int

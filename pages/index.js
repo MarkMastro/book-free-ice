@@ -12,9 +12,20 @@ export default function Home() {
       </Head>
       <nav>
           <li>Past Bookings</li>
-          
         </nav>
       <main className={styles.main}>
+        <h3> Search for rinks</h3>
+        <form>
+          <input
+          type="text"
+
+          ></input>
+          <input type="date"></input>
+          <button
+          type="submit">Search</button>
+        </form>
+        
+
       <h1>Search for free ice bookings below!</h1>
       </main>
 
@@ -25,9 +36,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+          
         </a>
       </footer>
     </div>
