@@ -22,18 +22,18 @@ async function main(){
             data:rinkTimeSlot
         })
     }
-
-    for(let booking of Bookings){
-        console.log(typeof booking)
-        await prisma.booking.create({
-            data:booking
-        })
-    }
     for(let user of Users){
         await prisma.user.create({
             data:user
         })
     }
+
+    for(let booking of Bookings){
+        await prisma.booking.create({
+            data:booking
+        })
+    }
+    
 }
 
 main().catch(e=>{
